@@ -49,8 +49,11 @@ export async function POST(request: NextRequest) {
       lastName: data.lastName,
       email: data.email,
       phone: data.phone,
+      consentText:
+        'Ik ga akkoord dat mijn gegevens worden gebruikt voor het opnemen van contact en voor marketingdoeleinden',
       userAgent,
       ipHash,
+      ipAddress: ip,
     });
 
     return NextResponse.json({ ok: true, id: 'success' }, { status: 201 });

@@ -27,6 +27,9 @@ export const submissionSchema = z.object({
   lastName: z.string().min(2, 'Achternaam moet minimaal 2 karakters bevatten'),
   email: z.string().email('Voer een geldig e-mailadres in'),
   phone: z.string().min(1, 'Telefoonnummer is verplicht'),
+  consent: z.boolean().refine((val) => val === true, {
+    message: 'Je moet akkoord gaan met het gebruik van je gegevens',
+  }),
 });
 
 export type SubmissionFormData = z.infer<typeof submissionSchema>;

@@ -203,6 +203,23 @@ export function Footer() {
               </a>
             </div>
           </div>
+
+          {/* Creator Credits */}
+          <div className="border-t border-gray-800 mt-4 pt-4">
+            <div className="text-center">
+              <p className="text-gray-500 text-xs">
+                Ontwikkeld door{' '}
+                <a
+                  href="https://www.linkedin.com/in/tristanvarewijck-1999/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors underline"
+                >
+                  Tristan Varewijck
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

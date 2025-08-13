@@ -6,6 +6,11 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import {
   CheckCircle,
   ArrowRight,
   ArrowLeft,
@@ -16,6 +21,7 @@ import {
   Calculator,
   Loader2,
   X,
+  HelpCircle,
 } from 'lucide-react';
 import axios from 'axios';
 import PhoneInput from 'react-phone-number-input';
@@ -43,6 +49,7 @@ interface FormData {
   lastName: string;
   email: string;
   phone: string;
+  consent: boolean;
 }
 
 const daytimeOptions = [
@@ -57,6 +64,7 @@ export function SubmissionForm() {
   const [addressError, setAddressError] = useState('');
   const [isLoadingAddress, setIsLoadingAddress] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isTooltipOpen, setIsTooltipOpen] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     postcode: '',
     huisnummer: '',
@@ -70,6 +78,7 @@ export function SubmissionForm() {
     lastName: '',
     email: '',
     phone: '',
+    consent: false,
   });
 
   const fetchPostcodeData = useCallback(async () => {
@@ -146,6 +155,7 @@ export function SubmissionForm() {
         lastName: formData.lastName,
         email: formData.email,
         phone: formData.phone,
+        consent: formData.consent,
       };
 
       // Submit to API with minimum 1 second delay
@@ -193,7 +203,8 @@ export function SubmissionForm() {
           formData.firstName &&
           formData.lastName &&
           formData.email &&
-          formData.phone
+          formData.phone &&
+          formData.consent
         );
       default:
         return false;
@@ -373,9 +384,33 @@ export function SubmissionForm() {
           {/* Step 3: Energy consumption */}
           {currentStep === 3 && (
             <div className="space-y-4">
-              <p className=" mb-4">
-                Hoeveel energie verbruik je jaarlijks? (in kWh)
-              </p>
+              <div className="flex items-center gap-2 mb-4">
+                <p className="mb-0">
+                  Hoeveel energie verbruik je jaarlijks? (in kWh)
+                </p>
+                <Tooltip open={isTooltipOpen} onOpenChange={setIsTooltipOpen}>
+                  <TooltipTrigger asChild>
+                    <button
+                      type="button"
+                      onClick={() => setIsTooltipOpen(!isTooltipOpen)}
+                      className="text-gray-500 hover:text-gray-700 transition-colors p-1"
+                    >
+                      <HelpCircle className="w-4 h-4" />
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-sm p-3 bg-white border border-gray-200">
+                    <p className="text-sm leading-relaxed text-gray-900">
+                      Je jaarlijkse stroomverbruik (in kWh) kun je vinden op je
+                      jaarlijkse energierekening die je van je
+                      energieleverancier ontvangt. Deze rekening geeft een
+                      overzicht van je verbruik gedurende het jaar. Daarnaast
+                      kun je je verbruik ook inzien via een online klantportaal
+                      of app van je energieleverancier, of door je slimme
+                      meterstanden af te lezen, als je die hebt.
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </div>
               <div>
                 <Label htmlFor="yearlyConsumption">
                   Jaarlijks verbruik (kWh)
@@ -470,6 +505,22 @@ export function SubmissionForm() {
                   placeholder="06 12345678"
                   className="mt-1 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 />
+              </div>
+              <div className="flex items-start space-x-2 pt-2">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  checked={formData.consent}
+                  onChange={(e) => updateFormData('consent', e.target.checked)}
+                  className="mt-1 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                />
+                <Label
+                  htmlFor="consent"
+                  className="text-sm text-gray-700 leading-relaxed"
+                >
+                  Ik ga akkoord dat mijn gegevens worden gebruikt voor het
+                  opnemen van contact en voor marketingdoeleinden
+                </Label>
               </div>
             </div>
           )}

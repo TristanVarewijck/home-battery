@@ -51,7 +51,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden pb-16 pt-24">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden pb-16 pt-38">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-75"
         style={{
@@ -156,8 +156,8 @@ export function Hero() {
                   Gratis adviesgesprek
                 </h3>
                 <p className="text-gray-600">
-                  Vul het formulier in en ontvang binnen 24 uur een persoonlijke
-                  offerte
+                  Vul het formulier in en ontvang binnen 24 uur een
+                  vrijblijvende offerte
                 </p>
               </div>
               <SubmissionForm />

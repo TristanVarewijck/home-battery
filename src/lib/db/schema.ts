@@ -37,6 +37,8 @@ export const submissions = mysqlTable('submissions', {
   // Additional metadata
   userAgent: text('user_agent'),
   ipHash: varchar('ip_hash', { length: 64 }),
+  ipAddress: varchar('ip_address', { length: 45 }),
+  consentText: text('consent_text'),
 });
 
 // TypeScript types for type safety
