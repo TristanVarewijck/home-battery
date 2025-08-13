@@ -141,7 +141,11 @@ export function Hero() {
             </animated.div>
           </animated.div>
 
-          <animated.div className="relative" style={rightContentSpring}>
+          <animated.div
+            className="relative"
+            style={rightContentSpring}
+            id={'submission-form-container'}
+          >
             <div className="hidden lg:block absolute -left-20 top-1/2 transform -translate-y-1/2 z-20">
               <ArrowRight className="w-10 h-10 text-yellow-400" />
             </div>
