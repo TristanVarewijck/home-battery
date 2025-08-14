@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     const ipHash = createHash('sha256').update(ip).digest('hex');
 
     // Insert into database
-    const result = await db.insert(submissions).values({
+    await db.insert(submissions).values({
       postcode: data.postcode,
       huisnummer: data.huisnummer,
       straat: data.straat,

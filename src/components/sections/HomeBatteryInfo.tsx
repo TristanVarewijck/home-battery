@@ -76,11 +76,11 @@ export function HomeBatteryInfo() {
           {/* Left: Image */}
           <animated.div style={springs} className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
+              {/* <Image
                 src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
                 alt="Thuisbatterij installatie"
                 className="w-full h-[400px] object-cover"
-              />
+              /> */}
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
             </div>
 
@@ -106,9 +106,9 @@ export function HomeBatteryInfo() {
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Zonnepanelen produceren de meeste energie overdag, maar u
-                verbruikt vaak meer energie 's avonds. Een thuisbatterij slaat
-                deze overtollige energie op, zodat u deze kunt gebruiken wanneer
-                u het nodig heeft.
+                verbruikt vaak meer energie &apos;s avonds. Een thuisbatterij
+                slaat deze overtollige energie op, zodat u deze kunt gebruiken
+                wanneer u het nodig heeft.
               </p>
             </div>
 
@@ -149,7 +149,7 @@ export function HomeBatteryInfo() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    Gebruik zonne-energie ook 's nachts
+                    Gebruik zonne-energie ook &apos;s nachts
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
