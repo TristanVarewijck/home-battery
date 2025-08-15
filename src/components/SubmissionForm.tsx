@@ -229,11 +229,10 @@ export function SubmissionForm() {
       </Card>
     );
   }
-
   return (
-    <Card className="w-full bg-gray-50 h-[600px] flex flex-col">
+    <Card className="w-full bg-gray-50 h-auto lg:h-[600px] flex flex-col">
       <CardHeader className="text-sm border-b border-gray-200 mb-4">
-        <CardTitle className="flex items-center justify-between text-2xl">
+        <CardTitle className="flex items-start gap-2 flex-col-reverse lg:flex-row lg:items-center justify-between text-2xl">
           <div className="flex items-center gap-2">
             {currentStep === 1 && <Home className="w-5 h-5 text-green-600" />}
             {currentStep === 2 && <Sun className="w-5 h-5 text-green-600" />}
@@ -250,7 +249,9 @@ export function SubmissionForm() {
               {currentStep === 5 && 'Persoonlijke gegevens'}
             </span>
           </div>
-          <div className="text-sm text-gray-500">Stap {currentStep} van 5</div>
+          <div className="text-xs lg:text-sm text-gray-500">
+            Stap {currentStep} van 5
+          </div>
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col">
@@ -354,7 +355,7 @@ export function SubmissionForm() {
           {currentStep === 2 && (
             <div className="space-y-4">
               <p className=" mb-4">Heb je zonnepanelen?</p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 lg:gap-4">
                 <Button
                   type="button"
                   variant={
@@ -384,7 +385,7 @@ export function SubmissionForm() {
           {/* Step 3: Energy consumption */}
           {currentStep === 3 && (
             <div className="space-y-4">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-start lg:items-center flex-col-reverse lg:flex-row gap-2 mb-4">
                 <p className="mb-0">
                   Hoeveel energie verbruik je jaarlijks? (in kWh)
                 </p>
@@ -393,12 +394,12 @@ export function SubmissionForm() {
                     <button
                       type="button"
                       onClick={() => setIsTooltipOpen(!isTooltipOpen)}
-                      className="text-gray-500 hover:text-gray-700 transition-colors p-1"
+                      className="text-gray-500 hidden lg:block hover:text-gray-700 transition-colors p-1"
                     >
                       <HelpCircle className="w-4 h-4" />
                     </button>
                   </TooltipTrigger>
-                  <TooltipContent className="max-w-sm p-3 bg-white border border-gray-200">
+                  <TooltipContent className="lg:max-w-sm max-w-xs p-3 bg-white border border-gray-200">
                     <p className="text-sm leading-relaxed text-gray-900">
                       Je jaarlijkse stroomverbruik (in kWh) kun je vinden op je
                       jaarlijkse energierekening die je van je
@@ -526,7 +527,11 @@ export function SubmissionForm() {
           )}
 
           {/* Navigation buttons */}
-          <div className="flex justify-between pt-4 mt-auto">
+          <div
+            className={`flex justify-between pt-4 mt-auto ${
+              currentStep === 5 ? 'flex-col gap-2 lg:flex-row' : 'flex-row'
+            }`}
+          >
             {currentStep > 1 && (
               <Button
                 type="button"
@@ -535,7 +540,7 @@ export function SubmissionForm() {
                 className="flex items-center gap-2"
               >
                 <ArrowLeft className="w-4 h-4" />
-                Vorige
+                <span className="hidden lg:block">Vorige</span>
               </Button>
             )}
 
@@ -553,7 +558,7 @@ export function SubmissionForm() {
               <Button
                 type="submit"
                 disabled={!canProceed() || isSubmitting}
-                className="flex items-center gap-2 ml-auto"
+                className="flex items-center gap-2 ml-auto w-full lg:w-auto"
               >
                 {isSubmitting ? (
                   <>

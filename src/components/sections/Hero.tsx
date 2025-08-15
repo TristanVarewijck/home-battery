@@ -21,14 +21,13 @@ export function Hero() {
     rightContentSpring,
   } = useHeroAnimations();
 
-  // Auto-focus postcode input on page load
   useEffect(() => {
     const timer = setTimeout(() => {
       const postcodeInput = document.getElementById('postcode');
       if (postcodeInput) {
         postcodeInput.focus();
       }
-    }, 500); // Small delay to ensure form is rendered
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -42,7 +41,6 @@ export function Hero() {
         'postcode'
       ) as HTMLInputElement;
       if (postcodeInput) {
-        // Only focus if the input is empty
         if (!postcodeInput.value) {
           postcodeInput.focus();
         }
@@ -151,7 +149,7 @@ export function Hero() {
             </div>
 
             <div
-              className={`bg-white rounded-2xl p-8 shadow-2xl transition-transform duration-300 ${
+              className={`bg-white rounded-2xl px-3 py-6 lg:px-6 lg:py-8 shadow-2xl transition-transform duration-300 ${
                 isFormWiggling ? 'animate-wiggle' : ''
               }`}
             >

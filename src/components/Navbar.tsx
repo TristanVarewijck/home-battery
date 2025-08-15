@@ -35,7 +35,7 @@ export function Navbar() {
           isVisible ? 'translate-y-0' : '-translate-y-[104px]'
         }`}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 hidden md:block">
           <div className="flex items-center justify-between h-10">
             {/* Contact Info */}
             <div className="flex items-center space-x-6 text-sm">
