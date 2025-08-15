@@ -65,11 +65,11 @@ export function HomeBatteryInfo() {
 
   return (
     <section
-      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+      className="py-10 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50"
       ref={ref}
     >
       <div className="container mx-auto px-4">
-        <animated.div style={springs} className="text-center mb-16">
+        <animated.div style={springs} className="text-center mb-8 lg:mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Wat is een <span className="text-blue-600">thuisbatterij</span>?
           </h2>
@@ -80,7 +80,7 @@ export function HomeBatteryInfo() {
           </p>
         </animated.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-8 lg:mb-16">
           {/* Left: Image */}
           <animated.div style={springs} className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -95,7 +95,7 @@ export function HomeBatteryInfo() {
             </div>
 
             {/* Floating stats card */}
-            <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
+            <div className="lg:absolute lg:-bottom-6 lg:-right-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100 mt-4 lg:mt-0">
               <div className="flex items-center space-x-3">
                 <div className="bg-green-100 p-2 rounded-lg">
                   <BatteryCharging className="w-6 h-6 text-green-600" />

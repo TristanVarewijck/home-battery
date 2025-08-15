@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: {
     default:
-      'ThuisBatterij - Bespaar op uw energierekening met duurzame energieopslag',
-    template: '%s | ThuisBatterij',
+      'GridBuddy - Bespaar op uw energierekening met duurzame energieopslag',
+    template: '%s | GridBuddy',
   },
   description:
     'Bespaar tot €800 per jaar op uw energierekening met een thuisbatterij. Professionele installatie, 10 jaar garantie en 24/7 support. Gratis adviesgesprek.',
@@ -27,39 +27,39 @@ export const metadata: Metadata = {
     'thuisbatterij installatie',
     'batterij systeem',
   ],
-  authors: [{ name: 'ThuisBatterij' }],
-  creator: 'ThuisBatterij',
-  publisher: 'ThuisBatterij',
+  authors: [{ name: 'GridBuddy' }],
+  creator: 'GridBuddy',
+  publisher: 'GridBuddy',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://thuisbatterij.nl'),
+  metadataBase: new URL('https://gridbuddy.nl'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'nl_NL',
-    url: 'https://thuisbatterij.nl',
+    url: 'https://gridbuddy.nl',
     title:
-      'ThuisBatterij - Bespaar op uw energierekening met duurzame energieopslag',
+      'GridBuddy - Bespaar op uw energierekening met duurzame energieopslag',
     description:
       'Bespaar tot €800 per jaar op uw energierekening met een thuisbatterij. Professionele installatie, 10 jaar garantie en 24/7 support.',
-    siteName: 'ThuisBatterij',
+    siteName: 'GridBuddy',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ThuisBatterij - Duurzame energieopslag voor uw woning',
+        alt: 'GridBuddy - Duurzame energieopslag voor uw woning',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ThuisBatterij - Bespaar op uw energierekening',
+    title: 'GridBuddy - Bespaar op uw energierekening',
     description:
       'Bespaar tot €800 per jaar op uw energierekening met een thuisbatterij. Professionele installatie en 10 jaar garantie.',
     images: ['/og-image.jpg'],
