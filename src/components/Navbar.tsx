@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, Info } from 'lucide-react';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,11 +47,11 @@ export function Navbar() {
                 <span>020 123 4567</span>
               </a>
               <a
-                href="mailto:info@thuisbatterij.nl"
+                href="mailto:info@gridbuddy.nl"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
               >
                 <Mail className="w-3 h-3" />
-                <span>info@thuisbatterij.nl</span>
+                <span>info@gridbuddy.nl</span>
               </a>
             </div>
 
@@ -72,7 +72,7 @@ export function Navbar() {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="text-xl font-bold text-white">
-                ThuisBatterij
+                GridBuddy
               </Link>
             </div>
 
@@ -80,9 +80,10 @@ export function Navbar() {
             <div className="hidden md:flex items-center space-x-8">
               <Link
                 href="/about"
-                className="text-white/90 hover:text-white transition-colors duration-200"
+                className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
               >
-                Over ons
+                <Info className="w-4 h-4" />
+                <span>Over ons</span>
               </Link>
             </div>
 
@@ -108,10 +109,11 @@ export function Navbar() {
               <div className="px-4 py-4 space-y-4">
                 <Link
                   href="/about"
-                  className="block text-white/90 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Over ons
+                  <Info className="w-4 h-4" />
+                  <span>Over ons</span>
                 </Link>
               </div>
             </div>

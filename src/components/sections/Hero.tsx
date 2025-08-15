@@ -2,7 +2,13 @@
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Battery, Zap, TrendingUp, ArrowRight } from 'lucide-react';
+import {
+  Battery,
+  Zap,
+  TrendingUp,
+  ArrowRight,
+  BatteryCharging,
+} from 'lucide-react';
 import { animated } from '@react-spring/web';
 import { useHeroAnimations } from '@/lib/animations';
 import { SubmissionForm } from '@/components/SubmissionForm';
@@ -53,8 +59,7 @@ export function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-75"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80')",
+          backgroundImage: "url('/solar-panel-field.avif')",
         }}
       />
 
@@ -72,7 +77,7 @@ export function Hero() {
                   variant="secondary"
                   className="w-fit bg-white/20 text-white border-white/30"
                 >
-                  <Battery className="w-4 h-4 mr-2" />
+                  <BatteryCharging className="w-4 h-4 mr-2" />
                   Duurzame energieopslag
                 </Badge>
               </animated.div>
@@ -126,7 +131,7 @@ export function Hero() {
             </animated.div>
 
             <animated.div
-              className="flex items-center space-x-8 text-sm text-blue-100"
+              className="flex items-center space-x-8 text-sm text-blue-100 justify-center lg:justify-start"
               style={featuresSpring}
             >
               <div className="flex items-center">

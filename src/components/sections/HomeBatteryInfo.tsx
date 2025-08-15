@@ -1,9 +1,17 @@
 'use client';
 
 import { animated, useInView } from '@react-spring/web';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Battery, Sun, TrendingUp, Zap, ArrowUp } from 'lucide-react';
+import {
+  Battery,
+  Sun,
+  TrendingUp,
+  Zap,
+  ArrowUp,
+  BatteryCharging,
+} from 'lucide-react';
 
 export function HomeBatteryInfo() {
   const [ref, springs] = useInView(
@@ -76,11 +84,13 @@ export function HomeBatteryInfo() {
           {/* Left: Image */}
           <animated.div style={springs} className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              {/* <Image
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80"
-                alt="Thuisbatterij installatie"
+              <Image
+                src="/solar-panel-home.avif"
+                alt="Zonnepanelen op een woning"
+                width={800}
+                height={400}
                 className="w-full h-[400px] object-cover"
-              /> */}
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent" />
             </div>
 
@@ -88,7 +98,7 @@ export function HomeBatteryInfo() {
             <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-lg p-4 border border-gray-100">
               <div className="flex items-center space-x-3">
                 <div className="bg-green-100 p-2 rounded-lg">
-                  <Battery className="w-6 h-6 text-green-600" />
+                  <BatteryCharging className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Gemiddelde besparing</p>
