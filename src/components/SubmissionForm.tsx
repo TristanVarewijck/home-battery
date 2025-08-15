@@ -26,6 +26,7 @@ import {
 import axios from 'axios';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import { useRouter } from 'next/navigation';
 
 interface FormData {
   // Step 1: Address
@@ -59,8 +60,8 @@ const daytimeOptions = [
 ];
 
 export function SubmissionForm() {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(1);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [addressError, setAddressError] = useState('');
   const [isLoadingAddress, setIsLoadingAddress] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -127,6 +128,18 @@ export function SubmissionForm() {
   const nextStep = () => {
     if (currentStep < 5) {
       setCurrentStep(currentStep + 1);
+      // Auto-scroll to form on mobile devices
+      if (window.innerWidth < 1024) {
+        // lg breakpoint
+        setTimeout(() => {
+          const formElement = document.querySelector(
+            '#submission-form-container'
+          );
+          if (formElement) {
+            formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
     }
   };
 
@@ -171,7 +184,7 @@ export function SubmissionForm() {
       }
 
       if (response.status === 201) {
-        setIsSubmitted(true);
+        router.push('/success');
       }
     } catch (error) {
       console.error('Submission error:', error);
@@ -211,24 +224,6 @@ export function SubmissionForm() {
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <Card className="w-full">
-        <CardContent className="pt-6">
-          <div className="text-center space-y-4">
-            <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
-            <h3 className="text-xl font-semibold text-gray-900">
-              Bedankt voor je aanvraag!
-            </h3>
-            <p className="text-gray-600">
-              We nemen binnen 24 uur telefonisch of per e-mail contact met je op
-              om je persoonlijke berekening te bespreken.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
   return (
     <Card className="w-full bg-gray-50 h-auto lg:h-[600px] flex flex-col">
       <CardHeader className="text-sm border-b border-gray-200 mb-4">
