@@ -35,7 +35,7 @@ export function Navbar() {
           isVisible ? 'translate-y-0' : '-translate-y-[104px]'
         }`}
       >
-        <div className="container mx-auto px-4 hidden md:block">
+        <div className="container mx-auto px-4 hidden lg:block">
           <div className="flex items-center justify-between h-10">
             {/* Contact Info */}
             <div className="flex items-center space-x-6 text-sm">
@@ -63,8 +63,8 @@ export function Navbar() {
 
       {/* Main Navbar */}
       <nav
-        className={`fixed top-10 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20 transition-transform duration-300 ${
-          isVisible ? 'translate-y-0' : '-translate-y-[104px]'
+        className={` lg:fixed lg:top-10 left-0 right-0 z-50 lg:bg-white/10 bg-blue-900/95 lg:backdrop-blur-md lg:border-b lg:border-white/20 transition-transform duration-300 ${
+          isVisible ? 'lg:translate-y-0' : 'lg:-translate-y-[104px]'
         }`}
       >
         <div className="container mx-auto px-4">
@@ -104,7 +104,7 @@ export function Navbar() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden bg-white/10 backdrop-blur-md border-t border-white/20">
+            <div className="lg:hidden  lg:bg-white/10 lg:backdrop-blur-md border-t-1 lg:border-white/20">
               <div className="px-4 py-4 space-y-4">
                 <Link
                   href="/about"

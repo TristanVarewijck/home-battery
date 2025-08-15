@@ -176,8 +176,10 @@ export function HomeBatteryInfo() {
               onClick={scrollToForm}
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg"
             >
-              <ArrowUp className="w-5 h-5 mr-2" />
-              Gratis berekening aanvragen
+              <ArrowUp className="w-5 h-5 lg:mr-2" />
+              <span className="hidden lg:block">
+                Gratis berekening aanvragen
+              </span>
             </Button>
           </div>
         </animated.div>
