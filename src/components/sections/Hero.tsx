@@ -29,9 +29,12 @@ export function Hero() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const postcodeInput = document.getElementById('postcode');
-      if (postcodeInput) {
-        postcodeInput.focus();
+      // Only auto-focus on screens larger than md (768px)
+      if (window.innerWidth >= 768) {
+        const postcodeInput = document.getElementById('postcode');
+        if (postcodeInput) {
+          postcodeInput.focus();
+        }
       }
     }, 500);
 
@@ -43,12 +46,15 @@ export function Hero() {
     setTimeout(() => setIsFormWiggling(false), 600);
 
     setTimeout(() => {
-      const postcodeInput = document.getElementById(
-        'postcode'
-      ) as HTMLInputElement;
-      if (postcodeInput) {
-        if (!postcodeInput.value) {
-          postcodeInput.focus();
+      // Only auto-focus on screens larger than md (768px)
+      if (window.innerWidth >= 768) {
+        const postcodeInput = document.getElementById(
+          'postcode'
+        ) as HTMLInputElement;
+        if (postcodeInput) {
+          if (!postcodeInput.value) {
+            postcodeInput.focus();
+          }
         }
       }
     }, 300);

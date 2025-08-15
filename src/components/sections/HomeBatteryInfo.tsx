@@ -4,14 +4,7 @@ import { animated, useInView } from '@react-spring/web';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  Battery,
-  Sun,
-  TrendingUp,
-  Zap,
-  ArrowUp,
-  BatteryCharging,
-} from 'lucide-react';
+import { Sun, TrendingUp, Zap, ArrowUp, BatteryCharging } from 'lucide-react';
 
 export function HomeBatteryInfo() {
   const [ref, springs] = useInView(

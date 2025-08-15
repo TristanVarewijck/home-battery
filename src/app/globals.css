@@ -55,6 +55,22 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
+
+  /* Prevent zoom on input focus for mobile devices */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+
+  /* Additional iOS-specific zoom prevention */
+  @supports (-webkit-touch-callout: none) {
+    input,
+    textarea,
+    select {
+      font-size: 16px !important;
+    }
+  }
 }
 
 @keyframes fadeInUp {
