@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | GridBuddy',
   },
   description:
-    'Bespaar tot €800 per jaar op uw energierekening met een thuisbatterij. Professionele installatie, 10 jaar garantie en 24/7 support. Gratis adviesgesprek.',
+    'Bespaar tot €2000 per jaar op uw energierekening met een thuisbatterij. Professionele installatie, 10 jaar garantie en 24/7 support. Gratis adviesgesprek.',
   keywords: [
     'thuisbatterij',
     'energieopslag',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title:
       'GridBuddy - Bespaar op uw energierekening met duurzame energieopslag',
     description:
-      'Bespaar tot €800 per jaar op uw energierekening met een thuisbatterij. Professionele installatie, 10 jaar garantie en 24/7 support.',
+      'Bespaar tot €2000 per jaar op uw energierekening met een thuisbatterij. Professionele installatie, 10 jaar garantie en 24/7 support.',
     siteName: 'GridBuddy',
     // images: [
     //   {
