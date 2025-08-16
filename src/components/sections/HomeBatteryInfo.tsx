@@ -166,24 +166,37 @@ export function HomeBatteryInfo() {
 
         {/* CTA Section */}
         <animated.div style={springs} className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Klaar om te besparen op uw energierekening?
-            </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Ontdek binnen 1 minuut hoeveel een thuisbatterij u kan besparen.
-              Vul het formulier in en ontvang een persoonlijke berekening.
-            </p>
-            <Button
-              size="lg"
-              onClick={scrollToForm}
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg"
-            >
-              <ArrowUp className="w-5 h-5 lg:mr-2" />
-              <span className="hidden lg:block">
-                Gratis berekening aanvragen
-              </span>
-            </Button>
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white relative overflow-hidden">
+            {/* Background Image */}
+            <div className="absolute inset-0 opacity-20">
+              <Image
+                src="/installment-battery.jpg"
+                alt="Thuisbatterij installatie"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold mb-4">
+                Klaar om te besparen op uw energierekening?
+              </h3>
+              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                Ontdek binnen 1 minuut hoeveel een thuisbatterij u kan besparen.
+                Vul het formulier in en ontvang een persoonlijke berekening.
+              </p>
+              <Button
+                size="lg"
+                onClick={scrollToForm}
+                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold px-8 py-3 text-lg"
+              >
+                <ArrowUp className="w-5 h-5 lg:mr-2" />
+                <span className="hidden lg:block">
+                  Gratis berekening aanvragen
+                </span>
+              </Button>
+            </div>
           </div>
         </animated.div>
       </div>
