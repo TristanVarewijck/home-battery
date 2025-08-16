@@ -17,12 +17,12 @@ const faqData = [
   {
     question: 'Hoeveel kan ik besparen met een thuisbatterij?',
     answer:
-      'De besparing hangt af van je verbruik, de grootte van de batterij en hoeveel zonne-energie je opwekt. Gemiddeld kan een huishouden 30–60% van de opgewekte stroom zelf gebruiken. Dit betekent vaak een lagere energiefactuur en meer onafhankelijkheid van stijgende elektriciteitsprijzen.',
+      'De besparing hangt af van je verbruik, de grootte van de batterij en hoeveel zonne-energie je opwekt. Gemiddeld kan een huishouden 70% van de opgewekte stroom zelf gebruiken. Dit betekent vaak een lagere energiefactuur en meer onafhankelijkheid van stijgende elektriciteitsprijzen.',
   },
   {
     question: 'Welke capaciteit thuisbatterij heb ik nodig?',
     answer:
-      'De ideale capaciteit hangt af van je verbruikspatroon en de grootte van je zonnepaneleninstallatie. Voor een gemiddeld gezin ligt dit meestal tussen de 5 en 10 kWh. Een installateur kan via een verbruiksanalyse berekenen welke capaciteit het meest rendabel is.',
+      'De ideale capaciteit hangt af van je verbruikspatroon en de grootte van je zonnepaneleninstallatie. Voor een gemiddeld gezin ligt dit meestal tussen de 15 en 23 kWh. Een installateur kan via een verbruiksanalyse berekenen welke capaciteit het meest rendabel is.',
   },
   {
     question: 'Kan ik een thuisbatterij combineren met zonnepanelen?',
@@ -30,9 +30,14 @@ const faqData = [
       "Ja, dat is zelfs de meest rendabele toepassing. Overdag laad je de batterij met zonne-energie op, en 's avonds of 's nachts gebruik je die stroom opnieuw. Ook zonder zonnepanelen kan een thuisbatterij interessant zijn, bijvoorbeeld om te profiteren van goedkopere nachttarieven.",
   },
   {
-    question: 'Wat zijn de kosten en subsidies voor thuisbatterijen?',
+    question: 'Wat zijn de kosten voor thuisbatterijen?',
     answer:
-      'De prijs van een thuisbatterij varieert doorgaans tussen de €1.500 en €7.000, afhankelijk van de capaciteit en het merk. In Vlaanderen bestaan er premies die de investering verlagen, al nemen die jaarlijks af. Daarnaast is er vaak een btw-verlaging op de installatie. Een erkend installateur kan je helpen met de aanvraag van deze subsidies.',
+      'De prijs van een thuisbatterij varieert doorgaans tussen de €7.000 en €13.000, afhankelijk van de capaciteit en het merk.',
+  },
+  {
+    question: 'Kan ik btw terugkrijgen bij de aankoop van een thuisbatterij?',
+    answer:
+      'Ja, bij de aankoop van onze slimme thuisbatterij kunt u in aanmerking komen voor teruggave van de btw, op voorwaarde dat u aan bepaalde criteria voldoet. Wilt u meer weten over deze voorwaarden? Neem gerust contact met ons op.',
   },
 ];
 

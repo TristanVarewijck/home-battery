@@ -68,7 +68,7 @@ export function Navbar() {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
               <Link href="/" className="text-xl font-bold text-white">
                 <Image
                   src="/logo.svg"
@@ -78,6 +78,10 @@ export function Navbar() {
                   height={175}
                 />
               </Link>
+              <span className="text-white">|</span>
+              <p className="text-white text-sm italic">
+                De beste vriend van je portemonnee en de planeet!
+              </p>
             </div>
 
             {/* Desktop Navigation */}

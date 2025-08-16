@@ -21,7 +21,7 @@ export function CTABanner() {
                   className="bg-white/20 text-white border-white/30"
                 >
                   <Zap className="w-4 h-4 mr-2" />
-                  Gratis offerte
+                  Gratis adviesgesprek
                 </Badge>
               </animated.div>
 
@@ -31,7 +31,7 @@ export function CTABanner() {
 
               <p className="text-xl text-blue-100 leading-relaxed">
                 Vul het formulier in en ontvang binnen 1 uur een persoonlijke
-                offerte voor uw thuisbatterij. Geen verplichtingen, alleen
+                adviesgesprek voor uw thuisbatterij. Geen verplichtingen, alleen
                 voordelen.
               </p>
             </div>
@@ -43,7 +43,7 @@ export function CTABanner() {
               </div>
               <div className="flex items-center space-x-3">
                 <CircleCheckBig className="w-5 h-5 text-accent/80" />
-                <span>Persoonlijke offerte</span>
+                <span>Persoonlijk adviesgesprek</span>
               </div>
               <div className="flex items-center space-x-3">
                 <CircleCheckBig className="w-5 h-5 text-accent/80" />

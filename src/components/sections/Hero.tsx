@@ -105,9 +105,9 @@ export function Hero() {
                 className="text-xl text-blue-100 leading-relaxed"
                 style={descriptionSpring}
               >
-                Sla uw zonne-energie op en gebruik deze wanneer het u uitkomt.{' '}
+                Sla uw energie op en gebruik deze wanneer het u uitkomt.{' '}
                 <span className="bg-yellow-400 text-blue-900 px-2 py-1 rounded font-semibold inline-block">
-                  Bespaar tot €2000
+                  Bespaar gemiddeld €2000
                 </span>{' '}
                 per jaar en draag bij aan een duurzame toekomst.
               </animated.p>
@@ -124,7 +124,7 @@ export function Hero() {
                   className="lg:w-auto w-full"
                 >
                   <Zap className="w-5 h-5 mr-2" />
-                  Gratis offerte aanvragen
+                  Gratis adviesgesprek
                 </Button>
               </div>
               <div>
@@ -146,7 +146,7 @@ export function Hero() {
             >
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                <span>Gratis installatie</span>
+                <span>Gratis app voor inzicht</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
@@ -154,7 +154,7 @@ export function Hero() {
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></div>
-                <span>24/7 support</span>
+                <span>Installatie binnen 6 weken</span>
               </div>
             </animated.div>
           </animated.div>
@@ -178,8 +178,7 @@ export function Hero() {
                   Gratis adviesgesprek
                 </h3>
                 <p className="text-gray-600">
-                  Vul het formulier in en ontvang binnen 1 uur een vrijblijvende
-                  offerte
+                  Vul het formulier in voor een een vrijblijvend adviesgesprek
                 </p>
               </div>
               <SubmissionForm />
