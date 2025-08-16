@@ -107,7 +107,7 @@ export function Hero() {
               >
                 Sla uw zonne-energie op en gebruik deze wanneer het u uitkomt.{' '}
                 <span className="bg-yellow-400 text-blue-900 px-2 py-1 rounded font-semibold inline-block">
-                  Bespaar tot €800
+                  Bespaar tot €2000
                 </span>{' '}
                 per jaar en draag bij aan een duurzame toekomst.
               </animated.p>

@@ -44,7 +44,7 @@ export function HomeBatteryInfo() {
     },
     {
       icon: TrendingUp,
-      title: 'Bespaar tot €800 per jaar',
+      title: 'Bespaar tot €2000 per jaar',
       description:
         'Verminder uw energierekening door slim gebruik van opgeslagen energie.',
     },
@@ -95,7 +95,7 @@ export function HomeBatteryInfo() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Gemiddelde besparing</p>
-                  <p className="text-xl font-bold text-green-600">€800/jaar</p>
+                  <p className="text-xl font-bold text-green-600">€1200/jaar</p>
                 </div>
               </div>
             </div>

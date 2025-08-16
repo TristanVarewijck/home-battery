@@ -63,7 +63,7 @@ export function CTABanner() {
                 <div>
                   <div className="font-semibold">Gemiddelde besparing</div>
                   <div className="text-2xl font-bold text-accent/80">
-                    €800 per jaar
+                    €1200 per jaar
                   </div>
                 </div>
               </div>

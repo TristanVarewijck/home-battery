@@ -1,4 +1,4 @@
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, Instagram } from 'lucide-react';
 import Image from 'next/image';
 
 export function Footer() {
@@ -21,8 +21,8 @@ export function Footer() {
               Uw partner voor duurzame energieopslag. Wij helpen u besparen op
               uw energierekening en dragen bij aan een groenere toekomst.
             </p>
-            {/* <div className="flex space-x-4">
-              <a
+            <div className="flex space-x-4">
+              {/* <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"
               >
@@ -36,17 +36,21 @@ export function Footer() {
               </a>
               <a
                 href="#"
+
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
+              </a> */}
               <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                href="https://www.instagram.com/grid.buddy?igsh=MXNlaWQ0N2M3NjB2ZQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
               >
                 <Instagram className="w-5 h-5" />
+                <span className="text-sm">@grid.buddy</span>
               </a>
-            </div> */}
+            </div>
           </div>
 
           {/* Quick Links */}
