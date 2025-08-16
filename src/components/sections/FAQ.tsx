@@ -43,7 +43,7 @@ export function FAQ() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
             <HelpCircle className="w-8 h-8 text-brand-blue-600 mr-2 text-blue-600" />
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
               Veelgestelde vragen
             </h2>
           </div>
