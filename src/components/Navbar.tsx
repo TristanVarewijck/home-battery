@@ -42,18 +42,18 @@ export function Navbar() {
             {/* Contact Info */}
             <div className="flex items-center space-x-6 text-sm">
               <a
-                href="tel:0201234567"
+                href="tel:+31624570564"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
               >
                 <Phone className="w-3 h-3" />
-                <span>020 123 4567</span>
+                <span>+31 6 24570564</span>
               </a>
               <a
-                href="mailto:info@gridbuddy.nl"
+                href="mailto:thuisbatterijen@gmail.com"
                 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200"
               >
                 <Mail className="w-3 h-3" />
-                <span>info@gridbuddy.nl</span>
+                <span>thuisbatterijen@gmail.com</span>
               </a>
             </div>
           </div>

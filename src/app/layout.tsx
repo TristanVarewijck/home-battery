@@ -124,8 +124,8 @@ export default function RootLayout({
               description:
                 'Thuisbatterij installatie en advies voor optimale energiebesparing',
               url: 'https://gridbuddy.nl',
-              telephone: '+31201234567',
-              email: 'info@gridbuddy.nl',
+              telephone: '+31624570564',
+              email: 'thuisbatterijen@gmail.com',
               // address: {
               //   '@type': 'PostalAddress',
               //   addressLocality: 'Amsterdam',

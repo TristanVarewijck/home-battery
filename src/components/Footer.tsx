@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 export function Footer() {
@@ -102,15 +102,21 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-brand-blue-400" />
-                <span className="text-gray-400">020 123 4567</span>
+                <a
+                  href="tel:+31624570564"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  +31 6 24570564
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-brand-blue-400" />
-                <span className="text-gray-400">info@gridbuddy.nl</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-4 h-4 text-brand-blue-400" />
-                <span className="text-gray-400">Amsterdam, Nederland</span>
+                <a
+                  href="mailto:thuisbatterijen@gmail.com"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  thuisbatterijen@gmail.com
+                </a>
               </div>
             </div>
           </div>

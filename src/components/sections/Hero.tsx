@@ -39,9 +39,19 @@ export function Hero() {
     setIsFormWiggling(true);
     setTimeout(() => setIsFormWiggling(false), 600);
 
-    setTimeout(() => {
-      // Only auto-focus on screens larger than md (768px)
-      if (window.innerWidth >= 768) {
+    // On mobile, scroll to the form
+    if (window.innerWidth < 768) {
+      setTimeout(() => {
+        const formContainer = document.getElementById(
+          'submission-form-container'
+        );
+        if (formContainer) {
+          formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
+    } else {
+      // On desktop, auto-focus the postcode input
+      setTimeout(() => {
         const postcodeInput = document.getElementById(
           'postcode'
         ) as HTMLInputElement;
@@ -50,8 +60,8 @@ export function Hero() {
             postcodeInput.focus();
           }
         }
-      }
-    }, 300);
+      }, 300);
+    }
   };
 
   return (
