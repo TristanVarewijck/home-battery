@@ -54,9 +54,6 @@ export function Navbar() {
                 <span>info@gridbuddy.nl</span>
               </a>
             </div>
-
-            {/* Right side - could add additional info here */}
-            <div className="text-xs text-gray-400">ISO 9001 Gecertificeerd</div>
           </div>
         </div>
       </div>
