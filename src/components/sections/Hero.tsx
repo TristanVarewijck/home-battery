@@ -2,13 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import {
-  Battery,
-  Zap,
-  TrendingUp,
-  ArrowRight,
-  BatteryCharging,
-} from 'lucide-react';
+import { Zap, TrendingUp, ArrowRight, BatteryCharging } from 'lucide-react';
 import { animated } from '@react-spring/web';
 import { useHeroAnimations } from '@/lib/animations';
 import { SubmissionForm } from '@/components/SubmissionForm';

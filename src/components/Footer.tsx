@@ -1,13 +1,5 @@
-import {
-  Battery,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -17,8 +9,13 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Battery className="w-8 h-8 text-brand-blue-400" />
-              <span className="text-xl font-bold">GridBuddy</span>
+              <Image
+                src="/logo.svg"
+                alt="GridBuddy Logo"
+                className="lg:w-40 w-32 md:36"
+                width={175}
+                height={175}
+              />
             </div>
             <p className="text-gray-400 leading-relaxed">
               Uw partner voor duurzame energieopslag. Wij helpen u besparen op
@@ -53,18 +50,18 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h3 className="text-lg font-semibold">Snelle links</h3>
-            <ul className="space-y-2">
-              <li>
+            <ul className="space-y-2"> */}
+          {/* <li>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Over ons
                 </a>
-              </li>
-              {/* <li>
+              </li> */}
+          {/* <li>
                 <a
                   href="#"
                   className="text-gray-400 hover:text-white transition-colors"
@@ -96,8 +93,8 @@ export function Footer() {
                   Onderhoud
                 </a>
               </li> */}
-            </ul>
-          </div>
+          {/* </ul>
+          </div> */}
 
           {/* Contact */}
           <div className="space-y-4">

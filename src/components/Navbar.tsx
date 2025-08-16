@@ -1,11 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, Info } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
+// Logo is now referenced directly from public folder
 
 export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -66,15 +68,20 @@ export function Navbar() {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="text-xl font-bold text-white">
-                GridBuddy
+                <Image
+                  src="/logo.svg"
+                  alt="GridBuddy Logo"
+                  className="lg:w-40 w-32 md:36"
+                  width={175}
+                  height={175}
+                />
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            {/* <div className="hidden md:flex items-center space-x-8">
               <Link
                 href="/about"
                 className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors duration-200"
@@ -82,10 +89,10 @@ export function Navbar() {
                 <Info className="w-4 h-4" />
                 <span>Over ons</span>
               </Link>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden">
+            {/* <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white p-2"
@@ -97,11 +104,11 @@ export function Navbar() {
                   <Menu className="w-6 h-6" />
                 )}
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile Menu */}
-          {isMenuOpen && (
+          {/* {isMenuOpen && (
             <div className="lg:hidden  lg:bg-white/10 lg:backdrop-blur-md border-t-1 lg:border-white/20">
               <div className="px-4 py-4 space-y-4">
                 <Link
@@ -114,7 +121,7 @@ export function Navbar() {
                 </Link>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </nav>
     </>
