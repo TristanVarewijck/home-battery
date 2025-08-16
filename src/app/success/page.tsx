@@ -37,20 +37,26 @@ export default function SuccessPage() {
                   je op via telefoon of e-mail om je persoonlijke berekening te
                   bespreken.
                 </p>
-                <div className="flex items-center justify-center gap-4 text-blue-700">
-                  <div className="flex items-center gap-2">
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-4 text-blue-700">
+                  <a
+                    href="tel:+31624570564"
+                    className="flex items-center gap-2 hover:text-blue-900 transition-colors"
+                  >
                     <Phone className="w-4 h-4" />
                     <span className="text-sm">Telefoon</span>
-                  </div>
-                  <div className="flex items-center gap-2">
+                  </a>
+                  <a
+                    href="mailto:thuisbatterijen@gmail.com"
+                    className="flex items-center gap-2 hover:text-blue-900 transition-colors"
+                  >
                     <Mail className="w-4 h-4" />
                     <span className="text-sm">E-mail</span>
-                  </div>
+                  </a>
                 </div>
               </div>
 
               <p className="text-gray-500 text-sm">
-                Je kunt deze pagina nu sluiten. We nemen binnen 24 uur contact
+                Je kunt deze pagina nu sluiten. We nemen binnen 1 uur contact
                 met je op.
               </p>
             </div>

@@ -178,8 +178,8 @@ export function Hero() {
                   Gratis adviesgesprek
                 </h3>
                 <p className="text-gray-600">
-                  Vul het formulier in en ontvang binnen 24 uur een
-                  vrijblijvende offerte
+                  Vul het formulier in en ontvang binnen 1 uur een vrijblijvende
+                  offerte
                 </p>
               </div>
               <SubmissionForm />

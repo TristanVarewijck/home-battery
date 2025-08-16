@@ -258,8 +258,8 @@ export function SubmissionForm() {
           {currentStep === 1 && (
             <div className="space-y-4">
               <p className="text-base  mb-4 ">
-                Vul je adres in en ontdek binnen 1 minuut van een slimme
-                thuisbatterij jou geld oplevert.
+                Vul je adres in en ontdek wat een slimme thuisbatterij jou kan
+                opleveren.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
@@ -357,7 +357,11 @@ export function SubmissionForm() {
                     formData.hasSolarPanels === true ? 'default' : 'outline'
                   }
                   onClick={() => updateFormData('hasSolarPanels', true)}
-                  className="h-12 flex items-center gap-2"
+                  className={`h-12 flex items-center gap-2 ${
+                    formData.hasSolarPanels === true
+                      ? 'bg-green-600 hover:bg-green-700 text-white'
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-300 hover:border-gray-400'
+                  }`}
                 >
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   Ja
@@ -368,7 +372,11 @@ export function SubmissionForm() {
                     formData.hasSolarPanels === false ? 'default' : 'outline'
                   }
                   onClick={() => updateFormData('hasSolarPanels', false)}
-                  className="h-12 flex items-center gap-2"
+                  className={`h-12 flex items-center gap-2 ${
+                    formData.hasSolarPanels === false
+                      ? 'bg-red-600 hover:bg-red-700 text-white'
+                      : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-300 hover:border-gray-400'
+                  }`}
                 >
                   <X className="w-5 h-5 text-red-500" />
                   Nee
@@ -440,7 +448,11 @@ export function SubmissionForm() {
                         : 'outline'
                     }
                     onClick={() => updateFormData('daytimeUsage', option.value)}
-                    className="w-full justify-start h-12"
+                    className={`w-full justify-start h-12 ${
+                      formData.daytimeUsage === option.value
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                        : 'bg-white hover:bg-gray-50 text-gray-700 border-gray-300 hover:border-gray-400'
+                    }`}
                   >
                     {option.label}
                   </Button>

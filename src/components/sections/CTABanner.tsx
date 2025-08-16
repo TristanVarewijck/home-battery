@@ -30,7 +30,7 @@ export function CTABanner() {
               </h2>
 
               <p className="text-xl text-blue-100 leading-relaxed">
-                Vul het formulier in en ontvang binnen 24 uur een persoonlijke
+                Vul het formulier in en ontvang binnen 1 uur een persoonlijke
                 offerte voor uw thuisbatterij. Geen verplichtingen, alleen
                 voordelen.
               </p>
