@@ -78,8 +78,8 @@ export function Navbar() {
                   height={175}
                 />
               </Link>
-              <span className="text-white">|</span>
-              <p className="text-white text-sm italic">
+              <span className="text-white hidden lg:block">|</span>
+              <p className="text-white text-sm italic hidden lg:block">
                 De beste vriend van je portemonnee en de planeet!
               </p>
             </div>

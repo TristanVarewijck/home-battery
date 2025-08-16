@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Sun, TrendingUp, Zap, ArrowUp, BatteryCharging } from 'lucide-react';
+import { formatLocaleCurrency } from '@/lib/formatCurrency';
 
 export function HomeBatteryInfo() {
   const [ref, springs] = useInView(
@@ -44,7 +45,7 @@ export function HomeBatteryInfo() {
     },
     {
       icon: TrendingUp,
-      title: 'Bespaar gemiddeld €2000 per jaar',
+      title: 'Bespaar gemiddeld € 2.000,00 per jaar',
       description:
         'Verminder uw energierekening door slim gebruik van opgeslagen energie.',
     },
@@ -95,7 +96,14 @@ export function HomeBatteryInfo() {
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Gemiddelde besparing</p>
-                  <p className="text-xl font-bold text-green-600">€1200/jaar</p>
+                  <p className="text-xl font-bold text-green-600">
+                    {formatLocaleCurrency({
+                      amount: 2000,
+                      currency: 'EUR',
+                      locale: 'nl',
+                    })}
+                    /jaar
+                  </p>
                 </div>
               </div>
             </div>

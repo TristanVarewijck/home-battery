@@ -5,6 +5,7 @@ import { SubmissionForm } from '@/components/SubmissionForm';
 import { Zap, CircleCheckBig, Battery } from 'lucide-react';
 import { animated } from '@react-spring/web';
 import { useCTABannerAnimations } from '@/lib/animations';
+import { formatLocaleCurrency } from '@/lib/formatCurrency';
 
 export function CTABanner() {
   const { leftContentSpring, badgeSpring } = useCTABannerAnimations();
@@ -63,7 +64,12 @@ export function CTABanner() {
                 <div>
                   <div className="font-semibold">Gemiddelde besparing</div>
                   <div className="text-2xl font-bold text-accent/80">
-                    €1200 per jaar
+                    {formatLocaleCurrency({
+                      amount: 2000,
+                      currency: 'EUR',
+                      locale: 'nl',
+                    })}
+                    per jaar
                   </div>
                 </div>
               </div>

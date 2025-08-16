@@ -7,6 +7,8 @@ import { animated } from '@react-spring/web';
 import { useHeroAnimations } from '@/lib/animations';
 import { SubmissionForm } from '@/components/SubmissionForm';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { formatLocaleCurrency } from '@/lib/formatCurrency';
 
 export function Hero() {
   const [isFormWiggling, setIsFormWiggling] = useState(false);
@@ -66,12 +68,17 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden pb-16 lg:pt-38 pt-10">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-75"
-        style={{
-          backgroundImage: "url('/solar-panel-field.avif')",
-        }}
-      />
+      <div className="absolute inset-0">
+        <Image
+          src="/solar-panel-field.avif"
+          alt="Zonnepanelen veld achtergrond"
+          fill
+          priority
+          fetchPriority="high"
+          className="object-cover opacity-75"
+          sizes="100vw"
+        />
+      </div>
 
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60" />
 
@@ -107,7 +114,12 @@ export function Hero() {
               >
                 Sla uw energie op en gebruik deze wanneer het u uitkomt.{' '}
                 <span className="bg-yellow-400 text-blue-900 px-2 py-1 rounded font-semibold inline-block">
-                  Bespaar gemiddeld €2000
+                  Bespaar gemiddeld{' '}
+                  {formatLocaleCurrency({
+                    amount: 2000,
+                    currency: 'EUR',
+                    locale: 'nl',
+                  })}
                 </span>{' '}
                 per jaar en draag bij aan een duurzame toekomst.
               </animated.p>

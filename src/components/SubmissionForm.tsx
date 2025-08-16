@@ -398,6 +398,7 @@ export function SubmissionForm() {
                       type="button"
                       onClick={() => setIsTooltipOpen(!isTooltipOpen)}
                       className="text-gray-500 hidden lg:block hover:text-gray-700 transition-colors p-1"
+                      aria-label="Meer informatie over jaarlijks verbruik"
                     >
                       <HelpCircle className="w-4 h-4" />
                     </button>

@@ -32,7 +32,7 @@ const faqData = [
   {
     question: 'Wat zijn de kosten voor thuisbatterijen?',
     answer:
-      'De prijs van een thuisbatterij varieert doorgaans tussen de €7.000 en €13.000, afhankelijk van de capaciteit en het merk.',
+      'De prijs van een thuisbatterij varieert doorgaans tussen de € 7.000,00 en € 13.000,00, afhankelijk van de capaciteit en het merk.',
   },
   {
     question: 'Kan ik btw terugkrijgen bij de aankoop van een thuisbatterij?',
