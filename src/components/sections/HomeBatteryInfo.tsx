@@ -39,9 +39,9 @@ export function HomeBatteryInfo() {
   const benefits = [
     {
       icon: Sun,
-      title: 'Maximaliseer zonne-energie',
+      title: 'Maximaliseer energie',
       description:
-        'Sla overtollige zonne-energie op en gebruik deze wanneer de zon niet schijnt.',
+        'Sla overtollige energie op en gebruik deze wanneer de zon niet schijnt.',
     },
     {
       icon: TrendingUp,
@@ -68,9 +68,9 @@ export function HomeBatteryInfo() {
             Wat is een <span className="text-blue-600">thuisbatterij</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Een thuisbatterij is een slimme energieopslag die uw zonne-energie
-            bewaart voor later gebruik. Perfect voor huishoudens met
-            zonnepanelen die hun energieverbruik willen optimaliseren.
+            Een thuisbatterij is een slimme energieopslag die uw energie bewaart
+            voor later gebruik. Perfect voor huishoudens met zonnepanelen die
+            hun energieverbruik willen optimaliseren.
           </p>
         </animated.div>
 
@@ -160,7 +160,7 @@ export function HomeBatteryInfo() {
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                    Gebruik zonne-energie ook &apos;s nachts
+                    Gebruik de opgeslagen energie ook &apos;s nachts
                   </li>
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>

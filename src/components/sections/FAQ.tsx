@@ -17,7 +17,7 @@ const faqData = [
   {
     question: 'Hoeveel kan ik besparen met een thuisbatterij?',
     answer:
-      'De besparing hangt af van je verbruik, de grootte van de batterij en hoeveel zonne-energie je opwekt. Gemiddeld kan een huishouden 70% van de opgewekte stroom zelf gebruiken. Dit betekent vaak een lagere energiefactuur en meer onafhankelijkheid van stijgende elektriciteitsprijzen.',
+      'De besparing hangt af van je verbruik, de grootte van de batterij en hoeveel energie je opwekt. Gemiddeld kan een huishouden 70% van de opgewekte stroom zelf gebruiken. Dit betekent vaak een lagere energiefactuur en meer onafhankelijkheid van stijgende elektriciteitsprijzen.',
   },
   {
     question: 'Welke capaciteit thuisbatterij heb ik nodig?',
@@ -27,7 +27,7 @@ const faqData = [
   {
     question: 'Kan ik een thuisbatterij combineren met zonnepanelen?',
     answer:
-      "Ja, dat is zelfs de meest rendabele toepassing. Overdag laad je de batterij met zonne-energie op, en 's avonds of 's nachts gebruik je die stroom opnieuw. Ook zonder zonnepanelen kan een thuisbatterij interessant zijn, bijvoorbeeld om te profiteren van goedkopere nachttarieven.",
+      "Ja, dat is zelfs de meest rendabele toepassing. Overdag laad je de batterij met energie op, en 's avonds of 's nachts gebruik je die stroom opnieuw. Ook zonder zonnepanelen kan een thuisbatterij interessant zijn, bijvoorbeeld om te profiteren van goedkopere nachttarieven.",
   },
   {
     question: 'Wat zijn de kosten voor thuisbatterijen?',

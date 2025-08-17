@@ -25,14 +25,14 @@ const benefits = [
     icon: Euro,
     title: 'Bespaar op energiekosten',
     description:
-      'Gebruik uw opgeslagen zonne-energie tijdens dure piekuren en bespaar gemiddeld € 2.000,00 per jaar op uw energierekening.',
+      'Gebruik uw opgeslagen energie tijdens dure piekuren en bespaar gemiddeld € 2.000,00 per jaar op uw energierekening.',
     badge: 'Financieel voordeel',
   },
   {
     icon: Leaf,
     title: 'Duurzame keuze',
     description:
-      'Verminder uw CO2-uitstoot en draag bij aan een groenere toekomst door meer van uw eigen zonne-energie te gebruiken.',
+      'Verminder uw CO2-uitstoot en draag bij aan een groenere toekomst door meer van uw eigen energie te gebruiken.',
     badge: 'Milieuvriendelijk',
   },
   {
