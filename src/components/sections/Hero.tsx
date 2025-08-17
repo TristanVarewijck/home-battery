@@ -24,17 +24,42 @@ export function Hero() {
   } = useHeroAnimations();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      // Only auto-focus on screens larger than md (768px)
-      if (window.innerWidth >= 768) {
-        const postcodeInput = document.getElementById('postcode');
-        if (postcodeInput) {
-          postcodeInput.focus();
-        }
-      }
-    }, 500);
+    let hasUserScrolled = false;
+    let autoScrollTimer: NodeJS.Timeout;
 
-    return () => clearTimeout(timer);
+    // Track if user has scrolled
+    const handleScroll = () => {
+      hasUserScrolled = true;
+    };
+
+    // Auto-scroll to form after 5 seconds (only on mobile and if user hasn't scrolled)
+    const startAutoScrollTimer = () => {
+      autoScrollTimer = setTimeout(() => {
+        if (!hasUserScrolled && window.innerWidth < 768) {
+          const formContainer = document.getElementById(
+            'submission-form-container'
+          );
+          if (formContainer) {
+            formContainer.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        }
+      }, 5000);
+    };
+
+    // Start the timer when component mounts
+    startAutoScrollTimer();
+
+    // Add scroll listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Cleanup
+    return () => {
+      clearTimeout(autoScrollTimer);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const handleQuoteButtonClick = () => {
