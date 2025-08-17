@@ -83,7 +83,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/60" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           <animated.div
             className="space-y-4 lg:space-y-8 text-white"
             style={leftContentSpring}
@@ -153,7 +153,7 @@ export function Hero() {
             </animated.div>
 
             <animated.div
-              className="flex items-center space-x-8 text-sm text-blue-100 justify-center lg:justify-start"
+              className="flex md:items-center flex-col md:gap-4 gap-2 sm:flex-row text-sm text-blue-100 justify-center sm:justify-start"
               style={featuresSpring}
             >
               <div className="flex items-center">
